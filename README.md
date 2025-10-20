@@ -32,6 +32,14 @@ Lightning Locator is a React Native app built with Expo that helps you estimate 
    npm run start
    ```
 
+## Development Workflow
+
+- **Linting:** `npm run lint`
+- **Type checking:** `npm run typecheck`
+- **Unit tests:** `npm test`
+
+Run these commands before opening a pull request to catch issues early. If you add new helper logic (math, storage, etc.), include accompanying unit tests in `tests/unit/`.
+
 ## Testing
 
 Run the unit test suite:
@@ -40,6 +48,7 @@ Run the unit test suite:
 npm test
 ```
 
+> **Note:** The test and lint commands require dependencies to be installed (`npm install`). In restricted environments without registry access, these commands will fail until dependencies are available.
 ## Project Structure
 
 - `app/` – Expo Router screens (Home, Map, History, Settings)
