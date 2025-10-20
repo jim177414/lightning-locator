@@ -74,7 +74,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   updates: {
     url: 'https://u.expo.dev/00000000-0000-0000-0000-000000000000'
   },
-  plugins: ['expo-router', 'react-native-maps'],
+  plugins: ['expo-router', 'expo-maps'],
   experiments: {
     tsconfigPaths: true,
     typedRoutes: true

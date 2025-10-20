@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE } from 'expo-maps';
 import { useLocalSearchParams } from 'expo-router';
 import { palette, spacing, typography } from '../constants/theme';
 import { useStrikeStore } from '../state/strike.store';
