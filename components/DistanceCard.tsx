@@ -9,22 +9,27 @@ type DistanceCardProps = {
 };
 
 export function DistanceCard({ deltaSeconds, distanceMi, distanceKm, radiusKm }: DistanceCardProps) {
+  const hasDelta = typeof deltaSeconds === 'number';
+  const hasMiles = typeof distanceMi === 'number';
+  const hasKilometers = typeof distanceKm === 'number';
+  const hasRadius = typeof radiusKm === 'number';
+
   return (
     <View style={styles.card}>
       <Text style={styles.title}>Timing</Text>
-      <Text style={styles.value}>{deltaSeconds ? `${deltaSeconds.toFixed(1)} s` : '--'}</Text>
+      <Text style={styles.value}>{hasDelta ? `${deltaSeconds!.toFixed(1)} s` : '--'}</Text>
       <View style={styles.row}>
         <View style={styles.column}>
           <Text style={styles.label}>Miles</Text>
-          <Text style={styles.valueSmall}>{distanceMi ? distanceMi.toFixed(2) : '--'}</Text>
+          <Text style={styles.valueSmall}>{hasMiles ? distanceMi!.toFixed(2) : '--'}</Text>
         </View>
         <View style={styles.column}>
           <Text style={styles.label}>Kilometers</Text>
-          <Text style={styles.valueSmall}>{distanceKm ? distanceKm.toFixed(2) : '--'}</Text>
+          <Text style={styles.valueSmall}>{hasKilometers ? distanceKm!.toFixed(2) : '--'}</Text>
         </View>
         <View style={styles.column}>
           <Text style={styles.label}>Uncertainty</Text>
-          <Text style={styles.valueSmall}>{radiusKm ? `${(radiusKm * 1000).toFixed(0)} m` : '--'}</Text>
+          <Text style={styles.valueSmall}>{hasRadius ? `${(radiusKm! * 1000).toFixed(0)} m` : '--'}</Text>
         </View>
       </View>
     </View>
