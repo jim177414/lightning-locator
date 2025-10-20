@@ -1,5 +1,4 @@
-import { Platform, StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
-import { AdMobBanner } from 'expo-ads-admob';
+import { Platform, StyleProp, StyleSheet, View, ViewStyle, Text } from 'react-native';
 import { ENV } from '../lib/env';
 import { palette } from '../constants/theme';
 
@@ -24,13 +23,9 @@ export function AdBanner({ style }: AdBannerProps) {
 
   return (
     <View style={[styles.container, style]}>
-      <AdMobBanner
-        bannerSize="smartBannerPortrait"
-        adUnitID={unitId}
-        servePersonalizedAds
-        onDidFailToReceiveAdWithError={error => console.warn('Banner error', error)}
-        style={styles.banner}
-      />
+      <View style={styles.adPlaceholder}>
+        <Text style={styles.adText}>Ad Space (Disabled in Dev)</Text>
+      </View>
     </View>
   );
 }
@@ -41,7 +36,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
-  banner: {
-    alignSelf: 'center'
+  adPlaceholder: {
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(240, 165, 0, 0.1)',
+    borderRadius: 8,
+    paddingHorizontal: 20,
+  },
+  adText: {
+    color: palette.accent,
+    fontSize: 12,
+    opacity: 0.5,
   }
 });

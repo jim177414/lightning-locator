@@ -1,8 +1,4 @@
 import { Platform } from 'react-native';
-import {
-  AdMobInterstitial,
-  setTestDeviceIDAsync
-} from 'expo-ads-admob';
 import { ENV } from '../lib/env';
 import dayjs from 'dayjs';
 
@@ -10,7 +6,8 @@ let initialized = false;
 
 async function ensureInit() {
   if (!initialized) {
-    await setTestDeviceIDAsync('EMULATOR');
+    // Ads disabled in development (Expo Go doesn't support react-native-google-mobile-ads)
+    console.log('[Ads] Initialized (stub for development)');
     initialized = true;
   }
 }
@@ -53,14 +50,9 @@ class InterstitialController {
 
     await ensureInit();
 
-    try {
-      await AdMobInterstitial.setAdUnitID(unitId);
-      await AdMobInterstitial.requestAdAsync({ servePersonalizedAds: true });
-      await AdMobInterstitial.showAdAsync();
-      this.lastShownAt = dayjs();
-    } catch (error) {
-      console.warn('Failed to show interstitial', error);
-    }
+    // Stub for development - ads disabled in Expo Go
+    console.log('[Ads] Would show interstitial ad here (disabled in dev)');
+    this.lastShownAt = dayjs();
   }
 }
 

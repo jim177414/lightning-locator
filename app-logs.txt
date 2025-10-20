@@ -1,0 +1,162 @@
+
+> lightning-locator@1.0.0 start
+> expo start
+
+Starting project at /Applications/REPOS/lightning-locator
+env: load .env
+env: export APP_ENV GOOGLE_MAPS_API_KEY ADS_ENABLED ADMOB_BANNER_ID_ANDROID ADMOB_BANNER_ID_IOS ADMOB_INTERSTITIAL_ID_ANDROID ADMOB_INTERSTITIAL_ID_IOS INTERSTITIAL_EVERY_N_STRIKES INTERSTITIAL_COOLDOWN_MINUTES FUN_MODE HAPTICS_ENABLED UNCERTAINTY_REACTION_SECONDS UNCERTAINTY_COMPASS_DEGREES
+Starting Metro Bundler
+Waiting on http://localhost:8081
+Logs for your project will appear below.
+iOS Bundled 603ms node_modules/expo-router/entry.js (1054 modules)
+ WARN  The native view manager required by name (ExpoLinearGradient) from NativeViewManagerAdapter isn't exported by expo-modules-core. Views of this type may not render correctly. Exported view managers: [ExpoImage]. [Component Stack]
+ ERROR  Invariant Violation: requireNativeComponent: "ViewManagerAdapter_ExpoLinearGradient" was not found in the UIManager.
+
+This error is located at:
+    in ViewManagerAdapter_ExpoLinearGradient (created by ExpoLinearGradient)
+    in ExpoLinearGradient (created by LinearGradient)
+    in LinearGradient (created by HomeScreen)
+    in RCTView (created by View)
+    in View (created by HomeScreen)
+    in HomeScreen
+    in Unknown (created by Route(index))
+    in Suspense (created by Route(index))
+    in Route (created by Route(index))
+    in Route(index) (created by SceneView)
+    in StaticContainer
+    in EnsureSingleNavigator (created by SceneView)
+    in SceneView (created by SceneView)
+    in RCTView (created by View)
+    in View (created by DebugContainer)
+    in DebugContainer (created by MaybeNestedStack)
+    in MaybeNestedStack (created by SceneView)
+    in RCTView (created by View)
+    in View (created by SceneView)
+    in RNSScreen (created by Animated(Anonymous))
+    in Animated(Anonymous) (created by InnerScreen)
+    in Suspender (created by Freeze)
+    in Suspense (created by Freeze)
+    in Freeze (created by DelayedFreeze)
+    in DelayedFreeze (created by InnerScreen)
+    in InnerScreen (created by Screen)
+    in Screen (created by SceneView)
+    in SceneView (created by NativeStackViewInner)
+    in Suspender (created by Freeze)
+    in Suspense (created by Freeze)
+    in Freeze (created by DelayedFreeze)
+    in DelayedFreeze (created by ScreenStack)
+    in RNSScreenStack (created by ScreenStack)
+    in ScreenStack (created by NativeStackViewInner)
+    in NativeStackViewInner (created by NativeStackView)
+    in RCTView (created by View)
+    in View (created by SafeAreaProviderCompat)
+    in SafeAreaProviderCompat (created by NativeStackView)
+    in NativeStackView (created by NativeStackNavigator)
+    in PreventRemoveProvider (created by NavigationContent)
+    in NavigationContent
+    in Unknown (created by NativeStackNavigator)
+    in NativeStackNavigator
+    in Unknown (created by RootLayout)
+    in InterstitialManager (created by RootLayout)
+    in QueryClientProvider (created by RootLayout)
+    in RNCSafeAreaProvider (created by SafeAreaProvider)
+    in SafeAreaProvider (created by RootLayout)
+    in RootLayout
+    in Unknown (created by Route())
+    in Suspense (created by Route())
+    in Route (created by Route())
+    in Route() (created by ContextNavigator)
+    in RNCSafeAreaProvider (created by SafeAreaProvider)
+    in SafeAreaProvider (created by wrapper)
+    in wrapper (created by ContextNavigator)
+    in EnsureSingleNavigator
+    in BaseNavigationContainer
+    in ThemeProvider
+    in NavigationContainerInner (created by ContextNavigator)
+    in ContextNavigator (created by ExpoRoot)
+    in ExpoRoot (created by App)
+    in App (created by ErrorOverlay)
+    in ErrorToastContainer (created by ErrorOverlay)
+    in ErrorOverlay (created by withDevTools(ErrorOverlay))
+    in withDevTools(ErrorOverlay)
+    in RCTView (created by View)
+    in View (created by AppContainer)
+    in RCTView (created by View)
+    in View (created by AppContainer)
+    in AppContainer
+    in main(RootComponent), js engine: hermes
+ ERROR  Invariant Violation: requireNativeComponent: "ViewManagerAdapter_ExpoLinearGradient" was not found in the UIManager.
+
+This error is located at:
+    in ViewManagerAdapter_ExpoLinearGradient (created by ExpoLinearGradient)
+    in ExpoLinearGradient (created by LinearGradient)
+    in LinearGradient (created by HomeScreen)
+    in RCTView (created by View)
+    in View (created by HomeScreen)
+    in HomeScreen
+    in Unknown (created by Route(index))
+    in Suspense (created by Route(index))
+    in Route (created by Route(index))
+    in Route(index) (created by SceneView)
+    in StaticContainer
+    in EnsureSingleNavigator (created by SceneView)
+    in SceneView (created by SceneView)
+    in RCTView (created by View)
+    in View (created by DebugContainer)
+    in DebugContainer (created by MaybeNestedStack)
+    in MaybeNestedStack (created by SceneView)
+    in RCTView (created by View)
+    in View (created by SceneView)
+    in RNSScreen (created by Animated(Anonymous))
+    in Animated(Anonymous) (created by InnerScreen)
+    in Suspender (created by Freeze)
+    in Suspense (created by Freeze)
+    in Freeze (created by DelayedFreeze)
+    in DelayedFreeze (created by InnerScreen)
+    in InnerScreen (created by Screen)
+    in Screen (created by SceneView)
+    in SceneView (created by NativeStackViewInner)
+    in Suspender (created by Freeze)
+    in Suspense (created by Freeze)
+    in Freeze (created by DelayedFreeze)
+    in DelayedFreeze (created by ScreenStack)
+    in RNSScreenStack (created by ScreenStack)
+    in ScreenStack (created by NativeStackViewInner)
+    in NativeStackViewInner (created by NativeStackView)
+    in RCTView (created by View)
+    in View (created by SafeAreaProviderCompat)
+    in SafeAreaProviderCompat (created by NativeStackView)
+    in NativeStackView (created by NativeStackNavigator)
+    in PreventRemoveProvider (created by NavigationContent)
+    in NavigationContent
+    in Unknown (created by NativeStackNavigator)
+    in NativeStackNavigator
+    in Unknown (created by RootLayout)
+    in InterstitialManager (created by RootLayout)
+    in QueryClientProvider (created by RootLayout)
+    in RNCSafeAreaProvider (created by SafeAreaProvider)
+    in SafeAreaProvider (created by RootLayout)
+    in RootLayout
+    in Unknown (created by Route())
+    in Suspense (created by Route())
+    in Route (created by Route())
+    in Route() (created by ContextNavigator)
+    in RNCSafeAreaProvider (created by SafeAreaProvider)
+    in SafeAreaProvider (created by wrapper)
+    in wrapper (created by ContextNavigator)
+    in EnsureSingleNavigator
+    in BaseNavigationContainer
+    in ThemeProvider
+    in NavigationContainerInner (created by ContextNavigator)
+    in ContextNavigator (created by ExpoRoot)
+    in ExpoRoot (created by App)
+    in App (created by ErrorOverlay)
+    in ErrorToastContainer (created by ErrorOverlay)
+    in ErrorOverlay (created by withDevTools(ErrorOverlay))
+    in withDevTools(ErrorOverlay)
+    in RCTView (created by View)
+    in View (created by AppContainer)
+    in RCTView (created by View)
+    in View (created by AppContainer)
+    in AppContainer
+    in main(RootComponent), js engine: hermes

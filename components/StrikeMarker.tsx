@@ -1,4 +1,4 @@
-import { Circle, Marker } from 'expo-maps';
+import { Circle, Marker } from 'react-native-maps';
 import { palette } from '../constants/theme';
 import { Strike } from '../types/strike';
 

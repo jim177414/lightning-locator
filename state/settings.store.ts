@@ -9,15 +9,31 @@ type SettingsState = {
   onboardingAccepted: boolean;
   funMode: boolean;
   hapticsEnabled: boolean;
+  hydrated: boolean;
   setUnits: (units: Units) => void;
   setOnboardingAccepted: (accepted: boolean) => void;
 };
 
-const persisted = loadSettings();
+// Load settings asynchronously
+loadSettings().then(persisted => {
+  if (persisted) {
+    useSettingsStore.setState({ 
+      units: persisted.units,
+      onboardingAccepted: persisted.onboardingAccepted,
+      hydrated: true 
+    });
+  } else {
+    useSettingsStore.setState({ hydrated: true });
+  }
+}).catch(error => {
+  console.warn('Failed to load settings', error);
+  useSettingsStore.setState({ hydrated: true });
+});
 
 export const useSettingsStore = create<SettingsState>((set, get) => ({
-  units: persisted?.units ?? 'mi',
-  onboardingAccepted: persisted?.onboardingAccepted ?? false,
+  units: 'mi',
+  onboardingAccepted: false,
+  hydrated: false,
   funMode: ENV.funMode,
   hapticsEnabled: ENV.hapticsEnabled,
   setUnits: units => {
@@ -29,3 +45,4 @@ export const useSettingsStore = create<SettingsState>((set, get) => ({
     saveSettings({ units: get().units, onboardingAccepted: accepted });
   }
 }));
+

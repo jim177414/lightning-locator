@@ -6,10 +6,14 @@ import { Platform } from 'react-native';
 const SAMPLE_INTERVAL_MS = 100;
 
 export async function ensureLocationPermissions() {
+  console.log("[Sensors] Requesting location permissions...");
   const { status } = await Location.requestForegroundPermissionsAsync();
+  console.log("[Sensors] Location permission status:", status);
   if (status !== Location.PermissionStatus.GRANTED) {
+    console.error("[Sensors] ❌ Location permission denied");
     throw new Error('Location permission denied');
   }
+  console.log("[Sensors] ✅ Location permissions granted");
 }
 
 export type HeadingSample = {
@@ -81,10 +85,17 @@ export function useHeading() {
 }
 
 export async function getCurrentLocationAsync() {
+  console.log("[Sensors] Getting current location...");
   await ensureLocationPermissions();
+  console.log("[Sensors] Requesting position with highest accuracy...");
   const position = await Location.getCurrentPositionAsync({
     accuracy: Location.Accuracy.Highest,
     maximumAge: 10_000
+  });
+  console.log("[Sensors] ✅ Position obtained:", {
+    lat: position.coords.latitude,
+    lon: position.coords.longitude,
+    accuracy: position.coords.accuracy,
   });
   return {
     latitude: position.coords.latitude,
